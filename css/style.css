@@ -697,7 +697,7 @@ a {
     font-size: 14px;
     line-height: 18px;
     margin: 0;
-    padding: 0;
+    padding: 0 14px;
  }
 
  .catalog-category {
@@ -705,16 +705,21 @@ a {
  }
 
  .catalog-item-price{
+    display: flex;
     margin: 0;
     padding: 0;
     padding: 14px;
 }
 
  .catalog-item-price b {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     font-size: 14px;
     line-height: 18px;
 
-    width: 109px;
+    width: 110px;
     height: 43px;
     margin: 0;
     padding: 0;
@@ -723,12 +728,16 @@ a {
  }
 
  .catalog-item-price .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     font-size: 14px;
     line-height: 18px;
     color: #ffffff;
     margin: 0;
     padding: 0;
-    width: 78px;
+    width: 82px;
     height: 43px;
     
  }
