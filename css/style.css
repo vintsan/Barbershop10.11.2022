@@ -649,63 +649,103 @@ a {
 
 
 
-
+/* <section class="catalog">Список средств для ухода */
 
 .catalog-list {
     display: flex;
     flex-wrap: wrap;
-    padding: 0;
-    margin: 0;
-    margin-bottom: 25px;
- 
+    justify-content: space-between;
+    height: 592px;
+    align-content: space-between;
+}
+
+ .catalog ul{
     list-style: none;
- }
+    margin: 0;
+    padding: 0;
+}
 
- .catalog-item {
+.catalog-item {
+    display: flex;
     width: 220px;
-    margin-bottom: 20px;
-    margin-right: 20px;
     background-color: #f8f8f8;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
- }
+    box-shadow: 0 0 15px rgb(0 0 0 / 10%);
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
 
- .catalog-item:nth-child(3n) {
-    margin-right: 0;
- }
-
- .catalog-item:hover {
+.catalog-item:hover {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
  }
 
+
  .catalog-item a {
     color: #000000;
+   
  }
+ .catalog-item-link{
+    display: flex;
+    flex-direction: column-reverse;
+ }
+
+.catalog-item-link img{
+    margin-bottom: 15px;
+}
 
  .catalog-item h3 {
     font-size: 14px;
     line-height: 18px;
+    margin: 0;
+    padding: 0;
  }
 
  .catalog-category {
     text-transform: none;
  }
 
+ .catalog-item-price{
+    margin: 0;
+    padding: 0;
+    padding: 14px;
+}
+
  .catalog-item-price b {
     font-size: 14px;
     line-height: 18px;
-    text-align: center;
+
+    width: 109px;
+    height: 43px;
+    margin: 0;
+    padding: 0;
+    color: #000;
     background-color: #e5e5e5;
  }
 
  .catalog-item-price .button {
+    font-size: 14px;
     line-height: 18px;
     color: #ffffff;
+    margin: 0;
+    padding: 0;
+    width: 78px;
+    height: 43px;
+    
  }
+
+ .catalog-item-image{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 15px;
+ }
+
+
 
  
 .pagination-list {
     padding: 0;
     margin: 0;
+    display: flex;
  
     list-style: none;
  }
