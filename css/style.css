@@ -18,7 +18,7 @@ body {
     text-transform: uppercase;
 
     background-color: #000000;
-    background-image: url(img/bg.png);
+    background-image: url(../img/bg.png);
     background-position: top center;
     background-repeat: no-repeat;
 }
@@ -49,7 +49,7 @@ input[type="radio"].visually-hidden {
   /*   width: 1200px; */
     color: #000000;
     background-color:  #f9f6f3;
-    background-image: url(img/pattern-light.png);
+    background-image: url(../img/pattern-light.png);
     background-position: 0 0;
     background-repeat: repeat;
  }
@@ -163,7 +163,7 @@ a {
     width: 15px;
     height: 15px;
  
-    background-image: url(img/login.svg);
+    background-image: url(../img/login.svg);
     background-repeat: no-repeat;
     background-position: 0 0;
  
@@ -274,7 +274,7 @@ a {
 
     background-color: #f7f4f1;
     
-    background-image: url(img/line.png), url(img/pattern-light.png);
+    background-image: url(../img/line.png), url(../img/pattern-light.png);
     background-position: center, 0 0;
     background-repeat: no-repeat, repeat;
 }
@@ -584,7 +584,7 @@ a {
  }
 /* checked *//* checked *//* checked */
  .filter-input-checkbox:checked+.label-input-checkbox::before {
-    background-image: url(img/cross.svg);
+    background-image: url(../img/cross.svg);
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -635,7 +635,7 @@ a {
 
 /* checked */
 .filter-input-radio:checked+.label-input-radio::before {
-    background-image: url(img/black_circle.png);
+    background-image: url(../img/black_circle.png);
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -854,7 +854,7 @@ a {
     color: #ffffff;
  
     background-color: #212121;
-    background-image: url(img/pattern-darkc.png);
+    background-image: url(../img/pattern-darkc.png);
     background-position: 0 0;
     background-repeat: repeat;
  }
@@ -952,7 +952,7 @@ a {
  .modal {
     color: #000000;
     background-color: #f9f6f3;
-    background-image: url(img/pattern-light.jpg);
+    background-image: url(../img/pattern-light.jpg);
     background-position: 0 0;
     background-repeat: repeat;
  }
