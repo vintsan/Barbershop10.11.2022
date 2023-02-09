@@ -76,7 +76,11 @@ input[type="radio"].visually-hidden {
  .inner-page .user-navigation {
     margin-left: auto;
  }
- 
+ .inner-page .inner-page-container {
+    margin-bottom: 50px;
+ }
+
+
 /*  .inner-page .main-footer {
     margin-top: 45px;
  } */
@@ -106,6 +110,8 @@ a {
     font-size: 16px;
     line-height: 20px;    
     color: #ffffff;
+    font-family: "PT Sans Narrow", Arial, sans-serif;
+    font-weight: 700;
 
     background-color: transparent;
 }
@@ -125,6 +131,10 @@ a {
 /* ВРЕМЕННО ДЛЯ СЕТКИ */
   /*   border: 2px solid #ffffff; */
  }
+
+main.container{
+    margin-bottom: 65px;
+}
 
  .main-navigation-wrapper {
     width: 100%;
@@ -662,11 +672,13 @@ a {
 
 /* <section class="catalog">Список средств для ухода */
 
-.catalog-list {
+.catalog .catalog-list {
+    height: 592px;
+    margin-bottom: 45px;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    height: 592px;
     align-content: space-between;
 }
 
@@ -766,18 +778,29 @@ a {
 
  
 .pagination-list {
-    padding: 0;
-    margin: 0;
+    width: 193px;
+
     display: flex;
+    justify-content: space-between;
+    align-items: center;
  
-    list-style: none;
+ }
+ .pagination-item-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ .pagination-item{
+    
  }
 
- .pagination-item a {
+.pagination-item a {
+    width: 43px;
+    height: 43px;
     color: #ffffff;
 
     background-color: #000000;
- }
+}
  
  .pagination-item a:hover,
  .pagination-item a:focus,
@@ -989,19 +1012,19 @@ a {
     text-decoration: none;
  }
 
+
+
+
+
+
+
+
+
+
+
+
+
 /* 
-
-
-
-
-
-
-
-
-
-
-
-
 
 .site-navigation-current {
    position: relative;
