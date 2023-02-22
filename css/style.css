@@ -186,6 +186,7 @@ main.container{
  .login-link:focus::before,
  .login-link:active::before {
     opacity: 1;
+    color: #000000;
  }
 
 
