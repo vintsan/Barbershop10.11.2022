@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap');
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 .html,
 body {
     min-width: 1122px;
@@ -84,10 +89,7 @@ input[type="radio"].visually-hidden {
     margin-top: 45px;
  } */
 
-img {
-    max-width: 100%;
-    height: auto;
-}
+
 
 a {
     text-decoration: none;
