@@ -1289,13 +1289,13 @@ main.container {
 }
 
 .login-icon-user{
-    background-image: url(/img/user.svg);
+    background-image: url(../img/user.svg);
     background-repeat: no-repeat;
     background-position: 270px center;
 }
 
 .login-icon-password{
-    background-image: url(/img/lock.svg);
+    background-image: url(../img/lock.svg);
     background-repeat: no-repeat;
     background-position: 270px center;
 }
