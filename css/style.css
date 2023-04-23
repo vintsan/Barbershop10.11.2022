@@ -310,16 +310,7 @@ main.container {
     background-repeat: no-repeat, repeat;
 }
 
-.inner-columns {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
- 
-    margin: 60px 0;
- 
-    outline: 3px solid rgb(192, 190, 190);
-    outline-offset: 2px; 
- }
+
 
 .index-columns h2 {
     font-size: 30px;
@@ -468,6 +459,7 @@ main.container {
 
     background-color: #000000;
     border: none;
+    cursor: pointer;
 }
 
 .button:hover,
@@ -1062,16 +1054,41 @@ main.container {
     text-align: center;
  }
 
+ .inner-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+ 
+    margin: 60px 0;
+ }
+
  .inner-column-left,
  .inner-column-right {
     width: 460px;
-    outline: 3px solid red;
-    outline-offset: -2px;
  }
 
+ .inner-column-left *:first-child,
+ .inner-column-right *:first-child {
+    margin-top: 0;
+ }
+ 
+ .inner-column-left *:last-child,
+ .inner-column-right *:last-child {
+    margin-bottom: 0;
+ }
+
+ .inner-columns > h2:first-child {
+    width: 100%;
+    margin-top: 0;
+ }
+
+.short-text{
+    padding-right: 70px;
+}
 
 
 
+ 
 
 
 .main-footer {
@@ -1178,20 +1195,86 @@ main.container {
 
 
 .modal {
+    position: fixed;
     color: #000000;
     background-color: #f9f6f3;
     background-image: url(../img/pattern-light.png);
     background-position: 0 0;
     background-repeat: repeat;
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+}
+
+.modal-login{
+    top: 120px;
+    left: 50%;
+
+    display: none;
+    
+    width: 300px;
+    margin-left: -230px;
+    padding: 50px 80px;
 }
 
 .modal h2 {
+    margin: 0;
+    margin-bottom: 20px;
     font-size: 30px;
     line-height: 42px;
 }
 
+.modal-close{
+    position: absolute;
+    top: 0;
+    right: -34px;
+    width: 22px;
+    height: 22px;
+
+    font-size: 0;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+.modal-close::before,
+.modal-close::after{
+    content: "";
+
+    position: absolute;
+    top: 9px;
+    left: 0;
+
+    width: 19px;
+    height: 3px;
+
+    background-color: #d0d0d0;
+}
+
+.modal-close::before{
+    transform: rotate(45deg);
+}
+
+.modal-close::after{
+    transform: rotate(-45deg);
+}
+
+.modal-description{
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.login-form p{
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+
 .login-form input[type="text"],
 .login-form input[type="password"] {
+    box-sizing: border-box;
+    width: 300px;
+    padding: 10px 15px;
+    padding-right: 40px;
+
     font: inherit;
     color: #000000;
     text-transform: uppercase;
@@ -1203,10 +1286,72 @@ main.container {
     border-color: #663d15;
 }
 
-.login-checkbox :hover,
-.login-checkbox :focus {
+.login-icon-user{
+    background-image: url(/img/user.svg);
+    background-repeat: no-repeat;
+    background-position: 270px center;
+}
+
+.login-icon-password{
+    background-image: url(/img/lock.svg);
+    background-repeat: no-repeat;
+    background-position: 270px center;
+}
+
+.login-form .login-help{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 15px 0;
+}
+
+.login-checkbox{
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+
+.login-checkbox:hover,
+.login-checkbox:focus {
     color: #663d15;
 }
+
+.login-checkbox input[type="checkbox"] + .checkbox-indicator{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 17px;
+    height: 17px;
+    border: 2px solid #000000;
+}
+
+.login-checkbox input[type="checkbox"]:focus + .checkbox-indicator{
+    border-color: #663d15;
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before, .login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after{
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 1px;
+
+    width: 15px;
+    height: 2px;
+    background-color: #000000;
+}
+
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before{
+    transform: rotate(45deg);
+}
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after{
+    transform: rotate(-45deg);
+}
+
+
 
 .restore {
     color: #000000;
@@ -1219,112 +1364,25 @@ main.container {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-/* 
-
-
-
-
-.breadcrumbs-current::before {
-   content: '';
-
-  position: absolute;
- 
-
-   width: 20px;
-   height: 20px;
-  
-
-   background-color: #000000;
-
-   transform: rotate(45deg);
+.login-form .button{
+    width: 100%;
+    margin-right: 0;
 }
 
+.modal-map{
+    top: 50%;
+    left: 50%;
 
+    display: none;
 
-.inner-content {
-   margin-bottom: 75px;
+    width: 766px;
+    height: 561px;
+    margin-top: -280px;
+    margin-left: -390px;
+
+    border: 7px solid white;
 }
 
-.inner-content h2 {
-   margin-top: 60px;
-   margin-bottom: 30px;
-
-   font-size: 24px;
-   line-height: 30px;
+.modal-map p{
+    margin: 0;
 }
-
-.inner-content h3 {
-   margin-top: 60px;
-   margin-bottom: 30px;
-
-   font-size: 20px;
-   line-height: 24px;
-}
-
-.inner-content h2 + h3 {
-   margin-top: 30px;
-}
-
-.inner-content p {
-   margin: 14px 0;
-}
-
-.inner-content table {
-   border-collapse: collapse;
-}
-
-.inner-content td {
-   padding: 10px 15px;
-
-   border: 2px solid #000000;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.inner-column-left *:first-child,
-.inner-column-right *:first-child {
-   margin-top: 0;
-}
-
-.inner-column-left *:last-child,
-.inner-column-right *:last-child {
-   margin-bottom: 0;
-}
-
-.index-columns > h2:first-child {
-   width: 100%;
-   margin-top: 0;
-} */
